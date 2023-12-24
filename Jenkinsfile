@@ -7,7 +7,7 @@ node{
     
     stage("Git Clone")
     {
-        git 'git credentialsId: 'GitHubCred', url: 'https://github.com/szalake/star-agile-health-care.git''
+        git 'git credentialsId: 'GitHubCred', url: 'https://github.com/szalake/star-agile-health-care.git'
     }
     stage("maven build")
     {
