@@ -37,6 +37,6 @@ node{
     }
     stage('execute playbook')
     {
-        ansiblePlaybook credentialsId: 'jenkinsCred', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'ansible-playbook.yml', vaultTmpPath: ''
+       ansiblePlaybook credentialsId: 'jenkinAnsibleCred', installation: 'ansible', inventory: 'hosts', playbook: 'ansible-playbook.yaml', vaultTmpPath: ''
     }
 }
