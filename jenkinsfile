@@ -1,4 +1,4 @@
-def containerName="springbootdocker-bankproj"
+def containerName="heathcareprojimg"
 def tag="latest"
 def dockerHubUser="sharmilagaikwad29"
 //def dockerHome= tool 'docker' 
@@ -7,7 +7,7 @@ node{
     
     stage("Git Clone")
     {
-        git 'https://github.com/szalake/star-agile-banking-finance.git'
+        git 'git credentialsId: 'GitHubCred', url: 'https://github.com/szalake/star-agile-health-care.git''
     }
     stage("maven build")
     {
