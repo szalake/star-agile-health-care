@@ -28,7 +28,7 @@ node{
     }
     
     stage('Push to Docker Registry'){
-         withCredentials([usernamePassword(credentialsId: 'GitHubCred', passwordVariable: 'passwordVariable', usernameVariable: 'usernameVariable')]) {
+         withCredentials([usernamePassword(credentialsId: 'GitHubCred', usernameVariable: 'usernameVariable' , passwordVariable: 'passwordVariable')]) {
             sh "docker login -u $dockerUser -p $dockerPassword"
             sh "docker tag $containerName:$tag $dockerUser/$containerName:$tag"
             sh "docker push $dockerUser/$containerName:$tag"
